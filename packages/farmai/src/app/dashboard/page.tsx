@@ -4,7 +4,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 export default function Dashboard() {
-  const [userType] = useState<'farmer' | 'buyer' | 'admin'>('farmer');
+  const [userType, setUserType] = useState<'farmer' | 'buyer' | 'admin'>('farmer');
+  console.log(userType, setUserType);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -34,7 +35,7 @@ export default function Dashboard() {
         {/* Welcome Section */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome back, Farmer John! 👋</h1>
-          <p className="text-gray-600">Here's what's happening with your farm today</p>
+          <p className="text-gray-600">Here&apos;s what&apos;s happening with your farm today</p>
         </div>
 
         {/* Quick Stats */}
@@ -322,4 +323,5 @@ function CommunityItem({ title, author, likes }: {
     </div>
   );
 }
+
 

@@ -256,7 +256,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            © 2024 FARMAI. All rights reserved. Building the world's largest digital farming ecosystem.
+            © 2024 FARMAI. All rights reserved. Building the world&apos;s largest digital farming ecosystem.
           </div>
         </div>
       </footer>
@@ -275,5 +275,6 @@ function FeatureCard({ icon, title, description, link }: { icon: string; title: 
     </Link>
   );
 }
+
 
 
