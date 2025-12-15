@@ -1,0 +1,31 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import AIAssistant from "@/components/AIAssistant";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+export const metadata: Metadata = {
+  title: "FARMAI - Global Agriculture AI Platform",
+  description: "Empowering farmers worldwide with AI-driven crop and livestock solutions. Increase income, productivity, and resilience.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={`${inter.variable} antialiased font-sans`}>
+        {children}
+        <AIAssistant />
+      </body>
+    </html>
+  );
+}
+
+
